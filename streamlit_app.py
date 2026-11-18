@@ -1,3 +1,4 @@
+
 import streamlit as st
 import joblib
 
@@ -6,7 +7,11 @@ model = joblib.load("house_model.pkl")
 
 # Page title
 st.title("House Price Prediction")
-st.write("Enter house details to predict the price")
+
+# Application version
+st.subheader("Application Version: 2.0")
+st.write("This application predicts house prices using Machine Learning.")
+st.write("Enter the property details below to get the predicted price.")
 
 # User inputs
 area = st.number_input("Area (sq.ft)", min_value=100)
